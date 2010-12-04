@@ -1,0 +1,11 @@
+application: dict-icyomik
+version: youdao
+runtime: python
+api_version: 1
+
+handlers:
+- url: /_ah/xmpp/message/chat/
+  script: dict.py
+
+inbound_services:
+- xmpp_message
