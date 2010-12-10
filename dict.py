@@ -21,7 +21,7 @@ def get_elements(xml, elem):
 
 def crawl_xml(queryword):
 	xml_file = urlfetch.fetch(
-				"http://fanyi.youdao.com/translate?doctype=xml&type=AUTO&i=%s" %
+				"http://fanyi.youdao.com/translate?doctype=xml&xmlVersion=1.3&i=%s" %
 				urlfetch.urllib2.quote(queryword));
 	return xml_file.content;
 
@@ -36,3 +36,4 @@ application = webapp.WSGIApplication([('/_ah/xmpp/message/chat/', XMPPHandler)])
 
 if __name__ == "__main__":
 	run_wsgi_app(application);
+
