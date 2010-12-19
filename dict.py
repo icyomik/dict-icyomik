@@ -95,7 +95,7 @@ def crawl_xml(queryword):
 				results = results + asterisk + '\n'
 				for content in contents[0:]:
 					results = results + get_text(get_elements(content, 'name')[0]) \
-							+ ':' + get_text(get_elements(content, 'value')[0]) + '\n'
+							+ ': ' + get_text(get_elements(content, 'value')[0]) + '\n'
 		results = results + asterisk
 		return results.strip()
 
